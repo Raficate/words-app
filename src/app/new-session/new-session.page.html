@@ -1,0 +1,47 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>SALA: {{key}}</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">create-teams</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+ 
+  <ion-row class="sala-row">
+    <ion-card class="sala-card">
+      <ion-card-content>
+        CLAVE SALA: <br>
+        {{documentId}}
+      </ion-card-content>
+
+    </ion-card>
+  </ion-row>
+  <ion-row class="form-row">
+    <form>
+      <ion-label> Añade el siguiente jugador:</ion-label>
+      <br>
+      <ion-input [(ngModel)]="playerName" name="playerName" fill="outline"></ion-input>
+      <br>
+      <ion-button expand="full" class="player-add-btn" id="player-add-btn" color="warning" (click)="addPlayer()">AÑADIR</ion-button>
+      <br>
+      <br>
+    </form>
+  </ion-row>
+  <ion-row class="players-row">
+    <ion-item>
+      <ion-label>
+        <h1>Jugadores:</h1>
+        <p *ngFor="let player of players">{{player}}</p>
+      </ion-label>
+    </ion-item>
+
+  </ion-row>
+  <ion-row class="submit-row">
+    <ion-label id="alert-label"></ion-label>
+    <ion-button expand="full" class="go-play-btn" id="go-play-btn" color="success" (click)="goPlay()" disabled>A JUGAR!</ion-button>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true">
+
+  <ion-row class="sala-row">
+    <ion-card class="sala-card">
+      <ion-card-content>
+        INTRODUCE CLAVE DE LA SALA:
+      </ion-card-content>
+
+    </ion-card>
+  </ion-row>
+  <ion-row class="form-row">
+    <form>
+      <ion-input [(ngModel)]="gameKey" name="game-key" id="game-key-textbox" fill="outline"></ion-input>
+      <ion-label id="alert-label"></ion-label>
+      <br>
+      <ion-button expand="full" class="device-add-btn" id="device-add-btn" color="warning"  (click)="findSession()">BUSCAR SALA</ion-button>
+
+    </form>
+  </ion-row>
+  <!-- (click)="findSession(gameKey)" -->
+  <!-- [(ngModel)]="gameKey" -->

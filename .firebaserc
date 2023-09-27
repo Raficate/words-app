@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "words-63ac0": {
+      "hosting": {
+        "app": [
+          "words-63ac0"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "words-63ac0"
+  }
+}

@@ -1,0 +1,59 @@
+.sala-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+  }
+
+.sala-card {
+    width: 100%;
+    
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+}
+
+.players-row {
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    height: 40%;
+}
+
+.submit-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+}
+
+ion-card-content {
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#alert-label{
+  width: 100%;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+}
+
+
+.go-play-btn {
+  padding-bottom: 20px;
+  width: 75%;
+}
+
