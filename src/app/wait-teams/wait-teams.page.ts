@@ -18,9 +18,6 @@ export class WaitTeamsPage implements OnInit {
   actualGame: Game;
   documentId: string;
 
-
-  
-
   constructor(private gameService: GameService, private route: ActivatedRoute, private router:Router) { }
 
   ngOnInit() {
@@ -39,7 +36,7 @@ export class WaitTeamsPage implements OnInit {
       this.games = data as Game[];
       for (let i = 0; i<this.games.length; i++ ) {
         if(this.games[i].gameId == this.documentId && this.games[i].state == 'teamsReady'){
-          this.router.navigate(['/title-screen/'])
+          this.router.navigate(['/teams-view/' + this.documentId])
         }
       }   
     });

@@ -1,0 +1,25 @@
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+.words-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 50%;
+}
+
+.subtract-word-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}

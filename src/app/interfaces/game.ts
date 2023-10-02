@@ -7,5 +7,7 @@ export interface Game {
     redPoints: number,
     totalRounds: number,
     blueTeam: string[],
-    redTeam: string[]
+    redTeam: string[],
+    actualWords: string[],
+    remainingWords: number
 }

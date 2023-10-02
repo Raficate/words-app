@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>teams-view</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="teams-row">
+        <ion-col size="6">
+          <h3>EQUIPO AZUL:</h3>
+            <ul *ngFor="let person of game.blueTeam">
+              <li>
+                {{person}}
+              </li>
+            </ul>
+            Puntos: {{game.bluePoints}}
+        </ion-col>
+        <ion-col size="6">
+          <h3>EQUIPO ROJO:</h3>
+          <ul *ngFor="let person of game.redTeam">
+            <li>
+              {{person}}
+            </li>
+          </ul>
+          Puntos: {{game.redPoints}}
+      </ion-col>
+      
+    </ion-row>
+    <ion-row class="rounds-row">
+      <ion-label>Ronda: {{game.round}} / {{game.totalRounds}} </ion-label>
+    </ion-row>
+    <ion-row class="button-row">
+      <ion-button (click)="logGame()" >JUGAR</ion-button>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

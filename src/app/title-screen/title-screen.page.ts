@@ -25,23 +25,34 @@ export class TitleScreenPage implements OnInit {
     const game: Game = {
       gameId: key,
       state: 'waitingForOpponent',
-      round: 0,
+      round: 1,
       bluePoints: 0,
       redPoints: 0,
       totalRounds: 0,
       blueTeam: [],
-      redTeam: []
+      redTeam: [],
+      actualWords: [],
+      remainingWords: 25
     }
 
     this.gameService.create(game).then(() => {
       console.log('Game created succesfully with id: ' + game.gameId)
     })
+
     this.router.navigate(['/new-session/'+key]);
   }
 
   joinSession(){
     this.router.navigate(['/join-session']);
+    
+  }
 
+
+  getGamePrueba(key: string){
+    this.gameService.get(key).valueChanges().subscribe(data => {
+      this.game = data as Game;
+      localStorage.setItem('actualGame', JSON.stringify(this.game))
+    })
   }
 
 }

@@ -19,6 +19,7 @@ export class JoinSessionPage implements OnInit {
 
   ngOnInit() {
     this.retrieveGames();
+    localStorage.setItem('team', 'red');
   }
 
   retrieveGames(): void {
@@ -39,9 +40,18 @@ export class JoinSessionPage implements OnInit {
       for (let i = 0; i<this.games.length; i++ ) {
         const key = this.games[i].key;
         if(this.games[i].gameId == this.gameKey && key){
-          this.updateGameState(key, 'waitingTeams')
-          // this.games[i].state = 'waitingTeams'
-          this.router.navigate(['/wait-teams/'+this.gameKey])
+          if(this.games[i].state == 'blueRound'){
+            // this.updateGameState(key, 'blueRound');
+            // this.games[i].state = 'blueRound';
+            // localStorage.setItem('actualGame', JSON.stringify(this.games[i]))
+            this.router.navigate(['/teams-view/'+this.gameKey])
+          }else {
+            this.updateGameState(key, 'waitingTeams');
+            this.games[i].state = 'waitingTeams';
+            localStorage.setItem('actualGame', JSON.stringify(this.games[i]))
+            this.router.navigate(['/wait-teams/'+this.gameKey])
+          }
+          
           break;
         }
     }  
@@ -54,10 +64,12 @@ export class JoinSessionPage implements OnInit {
       this.gameService.update(key, { state: status })
       .then(() => {
         this.game.state = status;
+        localStorage.setItem('actualGame', JSON.stringify(this.game))
       })
       .catch(err => console.log(err));
 
   }
+
 
   
 

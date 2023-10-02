@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { GuessTeamPageRoutingModule } from './guess-team-routing.module';
+import { CountdownComponent } from 'ngx-countdown';
+
 
 import { GuessTeamPage } from './guess-team.page';
 
@@ -13,7 +15,8 @@ import { GuessTeamPage } from './guess-team.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    GuessTeamPageRoutingModule
+    GuessTeamPageRoutingModule,
+    CountdownComponent
   ],
   declarations: [GuessTeamPage]
 })

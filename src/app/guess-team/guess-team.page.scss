@@ -1,0 +1,70 @@
+#container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  ion-card {
+    width: auto;
+    height: 80px;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  
+  
+  .btn-wrong {
+    display: block;
+    width: 100%;
+    --background: #f83838;
+    text-align: center;
+    height: 80px;
+  }
+  
+  .btn-correct {
+    display: block;
+    width: 100%;
+    --background: #4ae154;
+    text-align: center;
+    height: 80px;
+  }
+  ion-icon{
+    font-size: 2.5em;
+  }
+  
+  .timer {
+    font-size: 3.5em;
+    line-height: 1.5;
+    font-weight:bold;
+    color: #000000;
+  }
+  
+  .start-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

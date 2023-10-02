@@ -36,12 +36,16 @@ const routes: Routes = [
     loadChildren: () => import('./rounds/rounds.module').then( m => m.RoundsPageModule)
   },
   {
-    path: 'guess-team',
+    path: 'guess-team/:id',
     loadChildren: () => import('./guess-team/guess-team.module').then( m => m.GuessTeamPageModule)
   },
   {
-    path: 'count-team',
+    path: 'count-team/:id',
     loadChildren: () => import('./count-team/count-team.module').then( m => m.CountTeamPageModule)
+  },
+  {
+    path: 'teams-view-alt/:id',
+    loadChildren: () => import('./teams-view-alt/teams-view-alt.module').then( m => m.TeamsViewAltPageModule)
   },
 ];
 

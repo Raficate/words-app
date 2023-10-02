@@ -1,13 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>count-team</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">count-team</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid>
+    <ion-row class="words-row">
+      <ul>
+        <li>{{palabra1}}</li>
+        <li>{{palabra2}}</li>
+        <li>{{palabra3}}</li>
+        <li>{{palabra4}}</li>
+        <li>{{palabra5}}</li>   
+      </ul>
+    </ion-row>
+    <ion-row>
+      <ion-item>
+        <ion-title> Palabras restantes: {{actualGame.remainingWords}}</ion-title>
+        <ion-item-divider></ion-item-divider>
+      </ion-item>
+    </ion-row>
+    <ion-row class="button-row">
+        <ion-button class="subtract-word-button" color="tertiary" (click)="subtractAWord()">-1</ion-button>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -10,11 +10,11 @@ export class GameService {
   private dbPath = '/games';
 
   gamesRef: AngularFireList<Game>;
-  // gameRef: AngularFireObject<Game>;
+  gameRef: AngularFireObject<Game>;
 
   constructor(private db: AngularFireDatabase) {
     this.gamesRef = db.list(this.dbPath);
-    // this.gameRef = db.object(this.dbPath)
+    this.gameRef = db.object(this.dbPath)
    }
 
    getAll(): AngularFireList<Game> {

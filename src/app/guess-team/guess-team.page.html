@@ -1,13 +1,124 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>guess-team</ion-title>
+    <ion-title>
+      25 palabras
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">guess-team</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-row>
+    <ion-col size="12">
+      <ion-card>
+        <countdown #counter  class="timer" [config]="{leftTime: 90, format: 'm:ss', demand: true}" (event)="handleEvent($event)"></countdown>
+      </ion-card>
+    </ion-col>
+    
+  </ion-row>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2">
+        <ion-button (click)="finishRound()" class= "btn-wrong" id="wrong1" disabled>
+          <ion-icon class= "icon-wrong" name="close"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="8">
+        <ion-card id="card1">
+          <ion-card-header>
+            <ion-card-title>{{palabra1}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="2">
+        <ion-button id="correct1" class="btn-correct" (click)="win1()" disabled>
+          <ion-icon class= "icon-correct" name="checkmark"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="2">
+        <ion-button (click)="finishRound()" class= "btn-wrong" id="wrong2" disabled>
+          <ion-icon class= "icon-wrong" name="close"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="8">
+        <ion-card id="card2">
+          <ion-card-header>
+            <ion-card-title>{{palabra2}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="2">
+        <ion-button id="correct2" class="btn-correct" (click)="win2()"  disabled>
+          <ion-icon class= "icon-correct" name="checkmark"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="2">
+        <ion-button (click)="finishRound()" class= "btn-wrong" id="wrong3" disabled>
+          <ion-icon class= "icon-wrong" name="close"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="8">
+        <ion-card id="card3">
+          <ion-card-header>
+            <ion-card-title>{{palabra3}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="2">
+        <ion-button id="correct3" class="btn-correct" (click)="win3()"  disabled>
+          <ion-icon class= "icon-correct" name="checkmark"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="2">
+        <ion-button (click)="finishRound()" class= "btn-wrong" id="wrong4" disabled>
+          <ion-icon class= "icon-wrong" name="close"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="8">
+        <ion-card id="card4">
+          <ion-card-header>
+            <ion-card-title>{{palabra4}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="2">
+        <ion-button id="correct4" class="btn-correct" (click)="win4()"  disabled>
+          <ion-icon class= "icon-correct" name="checkmark"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="2">
+        <ion-button (click)="finishRound()" class= "btn-wrong" id="wrong5" disabled>
+          <ion-icon class= "icon-wrong" name="close"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="8">
+        <ion-card id="card5">
+          <ion-card-header>
+            <ion-card-title>{{palabra5}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="2">
+        <ion-button id="correct5" class="btn-correct" (click)="win5()" disabled>
+          <ion-icon class= "icon-correct" name="checkmark"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="start-row">
+      <ion-button class="start-btn" (click)="counter.begin()">¡EMPEZAR!</ion-button>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
